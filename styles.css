@@ -1,0 +1,521 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: left;
+}
+
+/* Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: black;
+    position: fixed;
+    width: 90%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo img {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin-left: 10px;
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #32CD32; /* Green highlight */
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    margin-top: 80px;
+    position: relative;
+}
+
+/* Left Side Text */
+.hero-left {
+    flex: 1;
+    max-width: 400px;
+    text-align: left;
+    position: relative;
+    margin-top: 40px; /* Move text slightly down */
+}
+
+.hero-left h1 {
+    font-size: 50px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #32CD32;
+}
+
+/* Right Side Text */
+.hero-right {
+    flex: 1;
+    max-width: 400px;
+    text-align: right;
+    position: relative;
+    margin-bottom: 40px; /* Move text slightly up */
+}
+
+.hero-right p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Bottom Line */
+.bottom-line {
+    width: 450px;
+    height: 1px;
+    background-color: #32CD32;
+    margin-top: 5px;
+}
+.hero-bottom {
+text-align: center;
+    margin-top: 20px;
+    padding: 20px 15%;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Hero Image - Oval & Tilted */
+.hero-image {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+
+.hero-image img {
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #32CD32;
+    box-shadow: 0px 0px 20px rgba(50, 205, 50, 0.3);
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.hero-image img:hover {
+    transform: rotate(-10deg) scale(1.05);
+}
+
+/* About Section */
+.about {
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin-top: 30px;
+}
+
+/* Left Side: Image and Info */
+.about-left {
+    flex: 1;
+    text-align: center;
+    position: relative; /* Ensures absolute positioning works inside */
+    display: flex;
+    flex-direction: column; /* Stacking image on top of .about-info */
+    align-items: center; /* Center-align both elements */
+}
+
+/* Image Styling */
+.about-left img {
+    width: 100%; /* Ensures it matches .about-info width */
+    max-width: 300px; /* Matches .about-info */
+    height: auto;
+    border-radius: 5px 5px 0 0; /* Rounded only on the top */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.1);
+}
+
+/* About Info Box */
+.about-info {
+    background-color: #32CD32;
+    color: black;
+    padding: 15px;
+    width: 100%; /* Ensures it matches the image width */
+    max-width: 280px; /* Matches the image width */
+    height: auto;
+    border-radius: 0 0 5px 5px; /* Rounded only on the bottom */
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-top: -4px; /* Ensures no spacing between image and info */
+}
+
+
+/* Right Side: About Me Text */
+.about-right {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.about-right h1 {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+
+.about-right .highlight {
+    color: #32CD32;
+}
+
+/* Spacing for paragraphs */
+.about-right p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* Experience section*/
+.experience {
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+}
+/* Experience Container */
+.experience-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+}
+/* Left Side: Experience Title & Box */
+.experience-left {
+    flex: 1;
+    text-align: left;
+}
+.experience-left h1 {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+.highlight {
+    color: #32CD32;
+}
+/* Experience Box */
+.experience-box {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    width: 450px;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.6;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+}
+/* Date Alignment */
+.experience-box .date {
+    text-align: right;
+    font-weight: normal;
+    color: gray;
+}
+/* Vertical Line */
+.vertical-line {
+    width: 2px;
+    height: 250px;
+    background-color: white;
+    margin: 0 40px;
+}
+/* Right Side: Referees */
+
+.experience-right h3 {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+/* Referee Links */
+.referee-link {
+    color:#32CD32;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.referee-link:hover {
+    text-decoration: underline;
+    color: #176317;
+}
+.resume-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #32CD32;
+    color: black;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.resume-btn:hover {
+    background-color: #28a745;
+}
+
+
+@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vertical-line {
+        display: none; /* Remove line on small screens */
+    }
+
+    .experience-left, .experience-right {
+        text-align: center;
+    }
+
+    .add-experience {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero, .about , .experience, .work , .contact {
+    animation: fadeIn 1.2s ease-in-out;
+}
+/* work section */
+.work {
+    padding: 100px 10%;
+    text-align: center;
+}
+.work h1 {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+.highlight {
+    color: #32CD32;
+}
+/* Work Container */
+.work-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Work Card */
+.work-card {
+    background-color: white;
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+/* Work Card Hover Effect (Pop-out) */
+.work-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 10px 20px rgba(50, 205, 50, 0.3);
+}
+/* Work Card Image */
+.work-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+/* Work Card Title */
+.work-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+/* Work Card Button */
+.more-btn {
+    display: inline-block;
+    background-color: #32CD32;
+    color: black;
+    font-weight: bold;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.more-btn:hover {
+    background-color: #28a745;
+}
+
+/* Contact Section */
+.contact {
+    padding: 100px 10%;
+    display: flex;
+    justify-content: center;
+}
+/* Contact Container */
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    width: 100%;
+}
+/* Left Side: Contact Title */
+.contact-left {
+    flex: 1;
+    text-align: left;
+}
+.contact-left h1 {
+    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+}
+.highlight {
+    color: #32CD32;
+}
+/* Vertical Line */
+.vertical-line {
+    width: 2px;
+    height: 250px;
+    background-color: white;
+    margin: 0 40px;
+}
+/* Right Side: Contact Box */
+.contact-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+/* Contact Box */
+.contact-box {
+    background-color: #32CD32;
+    color: black;
+    padding: 30px;
+    width: 300px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 2;
+}
+/* Contact Box Icons */
+.contact-box i {
+    margin-right: 8px;
+}
+/* Contact Box Links */
+.contact-box a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-left, .hero-right {
+        text-align: center;
+        max-width: 100%;
+        margin: 20px 0;
+    }
+
+    .hero-image img {
+        width: 250px;
+    }
+
+    .hero-bottom {
+        padding: 20px 10%;
+    }
+
+    /* About Section */
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left img {
+        width: 250px;
+    }
+
+    .about-info {
+        font-size: 14px;
+    }
+
+    .about-right {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    
+
+    
+}
