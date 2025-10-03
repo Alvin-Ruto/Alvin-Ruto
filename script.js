@@ -22,14 +22,19 @@ document.addEventListener("DOMContentLoaded", function () {
         icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     }
 
-    // Smooth scrolling for navigation
+    // Smooth scrolling for navigation (only for same-page links)
     document.querySelectorAll("nav ul li a").forEach(anchor => {
         anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-                target.scrollIntoView({ behavior: "smooth" });
+            const href = this.getAttribute("href");
+            // Only prevent default for same-page links (starting with #)
+            if (href.startsWith("#")) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
             }
+            // For external page links (like about.html, contact.html), let them navigate normally
         });
     });
 

@@ -81,6 +81,8 @@ nav ul li a {
     font-size: 18px;
     transition: 0.3s;
     position: relative;
+    z-index: 1001;
+    cursor: pointer;
 }
 
 nav ul li a.active,
@@ -1069,6 +1071,7 @@ text-align: center;
     flex-direction: column;
     gap: 15px;
     z-index: 1000;
+    align-items: flex-end;
 }
 
 .floating-btn {
@@ -1112,7 +1115,7 @@ text-align: center;
     transition: all 0.3s ease;
     opacity: 0;
     visibility: hidden;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .scroll-to-top.visible {
@@ -1177,6 +1180,7 @@ text-align: center;
     .floating-actions {
         bottom: 20px;
         right: 20px;
+        gap: 10px;
     }
     
     .floating-btn {
@@ -1186,6 +1190,14 @@ text-align: center;
     
     .floating-btn span {
         display: none;
+    }
+    
+    .scroll-to-top {
+        bottom: 20px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
     }
     
     .skills-grid {
