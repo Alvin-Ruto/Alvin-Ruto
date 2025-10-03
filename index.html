@@ -3,8 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvin Kibet - Portfolio</title>
+    <title>Alvin Kibet - Full Stack Developer | Mobile App Developer | Data Scientist | Portfolio 2024</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Alvin Kibet is a Full Stack Developer, Mobile Application Developer, and Data Scientist passionate about agribusiness innovation. View my portfolio of projects and get in touch!">
+    <meta name="keywords" content="Alvin Kibet, Full Stack Developer, Mobile Developer, Data Scientist, React, JavaScript, Python, Agribusiness, Portfolio">
+    <meta name="author" content="Alvin Kibet Ruto">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alvin Kibet - Full Stack Developer | Portfolio">
+    <meta property="og:description" content="Full Stack Developer, Mobile Application Developer, and Data Scientist passionate about agribusiness innovation.">
+    <meta property="og:image" content="https://alvin-kibet-portfolio.vercel.app/assets/alvin-kibet.jpg">
+    <meta property="og:url" content="https://alvin-kibet-portfolio.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Alvin Kibet Portfolio">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alvin Kibet - Full Stack Developer | Portfolio">
+    <meta name="twitter:description" content="Full Stack Developer, Mobile Application Developer, and Data Scientist passionate about agribusiness innovation.">
+    <meta name="twitter:image" content="https://alvin-kibet-portfolio.vercel.app/assets/alvin-kibet.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+    <link rel="apple-touch-icon" href="assets/logo.jpg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" as="style">
+    <link rel="preload" href="assets/alvin-kibet.jpg" as="image">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,6 +53,11 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -46,5 +81,92 @@
         <p>Welcome to my portfolio, where <strong>tech meets innovation</strong>, and <strong>agribusiness gets a digital twist!</strong> I transform big ideas into real-world solutions, blending creativity, code, and a passion for impact.</p>
     </section>
 
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2>My <span class="highlight">Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-mobile-alt"></i> Mobile Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React Native</span>
+                        <span class="skill-tag">Flutter</span>
+                        <span class="skill-tag">Android</span>
+                        <span class="skill-tag">iOS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line"></i> Data Science & AI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">R</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">Pandas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub Projects Preview -->
+    <section class="github-projects">
+        <div class="container">
+            <h2>Featured <span class="highlight">Projects</span></h2>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded dynamically -->
+                <div class="project-card loading">
+                    <div class="project-skeleton">
+                        <div class="skeleton-image"></div>
+                        <div class="skeleton-content">
+                            <div class="skeleton-title"></div>
+                            <div class="skeleton-description"></div>
+                            <div class="skeleton-tags"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="github-link">
+                <a href="https://github.com/Alvin-Ruto" target="_blank" class="github-btn">
+                    <i class="fab fa-github"></i> View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <a href="assets/my_resume.pdf" download class="floating-btn resume-btn">
+            <i class="fas fa-download"></i>
+            <span>Resume</span>
+        </a>
+        <a href="mailto:alvinandy16@gmail.com" class="floating-btn contact-btn">
+            <i class="fas fa-envelope"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <script src="github-api.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
