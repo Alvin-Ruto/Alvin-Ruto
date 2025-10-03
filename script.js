@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// Contact Form Handler
+// Contact Form Handler with EmailJS
 function handleContactForm(e) {
     e.preventDefault();
     
@@ -129,41 +129,82 @@ function handleContactForm(e) {
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
     submitBtn.disabled = true;
     
-    // Simulate form submission (replace with actual form handling)
-    setTimeout(() => {
-        // Show success message
-        showFormMessage('success', 'Thank you for your message! I\'ll get back to you soon.');
+    // Get form data
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const subject = formData.get('subject');
+    const message = formData.get('message');
+    
+    // EmailJS template parameters
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        to_email: 'alvinandy16@gmail.com'
+    };
+    
+    // Check if EmailJS is available
+    if (typeof emailjs !== 'undefined') {
+        // Initialize EmailJS with your public key (you'll need to replace this)
+        emailjs.init('YOUR_PUBLIC_KEY');
+        
+        // Send email using EmailJS
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                showFormMessage('success', 'Thank you! Your message has been sent successfully. I\'ll get back to you soon!');
+                form.reset();
+            }, function(error) {
+                console.log('FAILED...', error);
+                showFormMessage('error', 'Sorry, there was an error sending your message. Please try again or contact me directly at alvinandy16@gmail.com');
+            })
+            .finally(function() {
+                // Reset button state
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
+    } else {
+        // Fallback: Open email client
+        const emailBody = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`;
+        const mailtoLink = `mailto:alvinandy16@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+        window.open(mailtoLink);
+        
+        showFormMessage('success', 'Your email client has been opened. Please send the message from there.');
         form.reset();
         
         // Reset button
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
-        
-        // In a real application, you would send the data to a server
-        console.log('Form data:', Object.fromEntries(formData));
-    }, 2000);
+    }
 }
 
 function showFormMessage(type, message) {
     const form = document.getElementById('contactForm');
-    const existingMessage = form.querySelector('.form-message');
+    if (!form) return;
     
+    const existingMessage = form.querySelector('.form-message');
     if (existingMessage) {
         existingMessage.remove();
     }
     
     const messageDiv = document.createElement('div');
     messageDiv.className = `form-message ${type}`;
-    messageDiv.textContent = message;
+    messageDiv.innerHTML = `
+        <i class="fas ${type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+        ${message}
+    `;
     
-    form.insertBefore(messageDiv, form.firstChild);
+    // Insert before submit button
+    const submitBtn = form.querySelector('.submit-btn');
+    form.insertBefore(messageDiv, submitBtn);
     
-    // Auto-remove message after 5 seconds
+    // Auto-remove message after 8 seconds
     setTimeout(() => {
         if (messageDiv.parentNode) {
             messageDiv.remove();
         }
-    }, 5000);
+    }, 8000);
 }
 
 // GitHub Projects Loading Function
