@@ -1,7 +1,7 @@
 {
   "name": "alvin-kibet-portfolio",
   "version": "1.0.0",
-  "description": "Modern portfolio website for Alvin Kibet - Full Stack Developer, Mobile App Developer, and Data Scientist",
+  "description": "Portfolio website for Alvin Kibet - Full Stack Developer, Mobile App Developer, and Data Scientist",
   "main": "index.html",
   "scripts": {
     "dev": "npx serve . -p 3000",

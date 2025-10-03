@@ -1,6 +1,6 @@
 # 🚀 Deployment Guide - Alvin Kibet Portfolio
 
-This guide will help you deploy your portfolio to Vercel with proper configuration.
+This guide will help you deploy your portfolio to Vercel.
 
 ## 📋 Prerequisites
 

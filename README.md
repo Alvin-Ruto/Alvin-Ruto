@@ -1,30 +1,30 @@
-# Alvin Kibet - Enhanced Portfolio
+# Alvin Kibet - Portfolio
 
-A modern, fully-featured portfolio website showcasing my work as a Full Stack Developer, Mobile Application Developer, and Data Scientist with a passion for agribusiness innovation.
+A modern portfolio website showcasing my work as a Full Stack Developer, Mobile Application Developer, and Data Scientist with a passion for agribusiness innovation.
 
 ## ✨ Features
 
-### 🎨 Modern Design
-- **Dark/Light Mode Toggle** - Seamless theme switching with persistent preferences
+### 🎨 Design Features
+- **Dark/Light Mode Toggle** - Theme switching with persistent preferences
 - **Responsive Design** - Optimized for all devices and screen sizes
-- **Smooth Animations** - Enhanced user experience with scroll animations and transitions
+- **Smooth Animations** - Scroll animations and transitions
 - **Modern UI Components** - Clean, professional design with hover effects
 
-### 🚀 Interactive Elements
-- **Dynamic GitHub Integration** - Real-time project fetching from GitHub API
-- **Contact Form** - Functional contact form with validation and feedback
-- **Scroll-to-Top Button** - Easy navigation with floating action buttons
-- **Typing Animation** - Engaging hero section with typewriter effect
-- **Parallax Effects** - Subtle parallax scrolling for visual appeal
+### 🚀 Interactive Features
+- **GitHub Integration** - Project fetching from GitHub API
+- **Contact Form** - Functional contact form with validation
+- **Scroll-to-Top Button** - Easy navigation with floating buttons
+- **Typing Animation** - Hero section with typewriter effect
+- **Parallax Effects** - Subtle parallax scrolling
 
-### 📱 Enhanced Sections
+### 📱 Sections
 - **Skills Showcase** - Organized skill categories with interactive tags
 - **Project Gallery** - Dynamic project cards with GitHub integration
-- **Social Media Links** - Interactive social media buttons with hover effects
+- **Social Media Links** - Interactive social media buttons
 - **Floating Action Buttons** - Quick access to resume and contact
 
 ### 🔧 Technical Features
-- **CSS Variables** - Consistent theming and easy customization
+- **CSS Variables** - Consistent theming and customization
 - **Intersection Observer** - Performance-optimized scroll animations
 - **Local Storage** - Theme preference persistence
 - **Error Handling** - Graceful fallbacks for API failures
@@ -48,12 +48,12 @@ A modern, fully-featured portfolio website showcasing my work as a Full Stack De
 
 ```
 Alvin-Ruto/
-├── index.html              # Main homepage with enhanced features
-├── about.html              # About page with theme toggle
-├── experience.html         # Experience page with enhanced styling
+├── index.html              # Main homepage
+├── about.html              # About page
+├── experience.html         # Experience page
 ├── work.html              # Work showcase page
 ├── contact.html           # Contact page with form and social links
-├── styles.css             # Enhanced CSS with theme support
+├── styles.css             # CSS with theme support
 ├── script.js              # Main JavaScript functionality
 ├── github-api.js          # GitHub API integration
 ├── assets/                # Images and resources
@@ -89,7 +89,7 @@ Alvin-Ruto/
    - Explore different sections using the navigation
    - Try the dark/light mode toggle
    - Test the contact form
-   - View GitHub projects integration
+   - View GitHub projects
 
 ### Customization
 
