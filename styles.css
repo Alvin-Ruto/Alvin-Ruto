@@ -466,23 +466,26 @@ text-align: center;
 }
 /* Work Container */
 .work-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
     margin-top: 20px;
+    align-items: start;
+    justify-items: center;
 }
 
 /* Work Card */
 .work-card {
-    background-color: white;
-    color: black;
+    background-color: var(--card-bg);
+    color: var(--text-primary);
     text-align: center;
-    border-radius: 10px;
-    padding: 15px;
-    width: 250px;
-    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease-in-out;
+    border-radius: 15px;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0px 5px 15px var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 /* Work Card Hover Effect (Pop-out) */
 .work-card:hover {
@@ -679,6 +682,8 @@ text-align: center;
     max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
+    align-items: start;
+    justify-items: center;
 }
 
 .document-card {
@@ -932,6 +937,8 @@ text-align: center;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
+    align-items: start;
+    justify-items: center;
 }
 
 .project-card {
@@ -940,6 +947,36 @@ text-align: center;
     overflow: hidden;
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 25px;
+    text-align: center;
+}
+
+.project-content h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.tech-tag {
+    background: var(--accent-color);
+    color: var(--bg-primary);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 500;
 }
 
 .project-card:hover {

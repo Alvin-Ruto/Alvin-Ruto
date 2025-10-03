@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Load GitHub projects (mock data for now)
-    loadGitHubProjects();
+    // loadGitHubProjects(); // Projects are now static in HTML
 
     // Parallax effect for hero section
     window.addEventListener('scroll', function() {
