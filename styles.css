@@ -1074,7 +1074,7 @@ text-align: center;
     flex-direction: row !important;
     gap: 10px !important;
     z-index: 1000 !important;
-    align-items: center !important;
+    align-items: flex-end !important;
     flex-wrap: nowrap !important;
 }
 
@@ -1083,7 +1083,7 @@ body .floating-actions,
 html body .floating-actions {
     flex-direction: row !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: flex-end !important;
     flex-wrap: nowrap !important;
 }
 
@@ -1102,9 +1102,11 @@ html body .floating-actions {
     box-shadow: 0 5px 15px var(--shadow) !important;
     min-width: 100px !important;
     max-width: 120px !important;
+    height: 45px !important;
     justify-content: center !important;
     white-space: nowrap !important;
     position: relative !important;
+    vertical-align: bottom !important;
 }
 
 .floating-btn:hover {
@@ -1200,7 +1202,7 @@ html body .floating-actions {
         right: 20px;
         gap: 8px;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-end;
         flex-wrap: nowrap;
     }
     
@@ -1209,6 +1211,7 @@ html body .floating-actions {
         font-size: 12px;
         min-width: 90px;
         max-width: 100px;
+        height: 40px;
         justify-content: center;
     }
     
@@ -1373,6 +1376,7 @@ html body .floating-actions {
         right: 15px;
         gap: 6px;
         flex-wrap: nowrap;
+        align-items: flex-end;
     }
     
     .floating-btn {
@@ -1380,6 +1384,7 @@ html body .floating-actions {
         font-size: 11px;
         min-width: 70px;
         max-width: 80px;
+        height: 35px;
     }
     
     .scroll-to-top {
