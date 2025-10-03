@@ -44,10 +44,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    padding: 15px 5%;
     background: var(--bg-primary);
     position: fixed;
-    width: 90%;
+    width: 100%;
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
@@ -1208,20 +1211,31 @@ text-align: center;
     
     /* Mobile header adjustments */
     header {
-        padding: 15px 5%;
-        width: 95%;
+        padding: 12px 3%;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .logo img {
+        width: 70px;
     }
     
     nav ul {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
     }
     
     nav ul li {
-        margin: 0 8px;
+        margin: 0 5px;
     }
     
     nav ul li a {
+        font-size: 14px;
+    }
+    
+    .theme-btn {
+        width: 40px;
+        height: 40px;
         font-size: 16px;
     }
     
@@ -1315,6 +1329,30 @@ text-align: center;
 
 /* Extra small screens */
 @media (max-width: 480px) {
+    /* Header adjustments for very small screens */
+    header {
+        padding: 10px 2%;
+    }
+    
+    .logo img {
+        width: 60px;
+    }
+    
+    nav ul li a {
+        font-size: 12px;
+    }
+    
+    nav ul li {
+        margin: 0 3px;
+    }
+    
+    .theme-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    /* Floating buttons */
     .floating-actions {
         bottom: 15px;
         right: 15px;
@@ -1330,12 +1368,6 @@ text-align: center;
     .scroll-to-top {
         bottom: 15px;
         left: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-    
-    .theme-btn {
         width: 40px;
         height: 40px;
         font-size: 16px;
