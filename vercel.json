@@ -1,7 +1,6 @@
 {
   "version": 2,
   "name": "alvin-kibet-portfolio",
-  "buildCommand": "",
   "builds": [
     {
       "src": "**/*",
@@ -28,15 +27,6 @@
     },
     {
       "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*\\.(css|js|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot))",
       "headers": [
         {
           "key": "Cache-Control",

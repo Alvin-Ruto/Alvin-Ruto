@@ -1,24 +1,6 @@
-# Ignore development files
 node_modules/
 .git/
 .gitignore
+.vercelignore
 README.md
-package-lock.json
-yarn.lock
-
-# Ignore IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Ignore OS files
-.DS_Store
-Thumbs.db
-
-# Ignore logs
-*.log
-logs/
-
-# Ignore environment files
-.env*
+my-portfolio.code-workspace

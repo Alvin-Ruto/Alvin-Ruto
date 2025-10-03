@@ -1,45 +1,18 @@
 {
   "name": "alvin-kibet-portfolio",
   "version": "1.0.0",
-  "description": "Portfolio website for Alvin Kibet - Full Stack Developer, Mobile App Developer, and Data Scientist",
+  "description": "Alvin Kibet's professional portfolio website",
   "main": "index.html",
   "scripts": {
-    "dev": "npx serve . -p 3000",
-    "build": "echo 'No build step required for static site'",
-    "start": "npx serve . -p 3000",
-    "deploy": "vercel --prod",
-    "preview": "vercel"
+    "dev": "npx serve .",
+    "start": "npx serve ."
   },
   "keywords": [
     "portfolio",
     "web-development",
-    "full-stack",
-    "mobile-development",
-    "data-science",
-    "react",
-    "javascript",
-    "html",
-    "css"
+    "alvin-kibet",
+    "static-site"
   ],
-  "author": {
-    "name": "Alvin Kibet Ruto",
-    "email": "alvinandy16@gmail.com",
-    "url": "https://github.com/Alvin-Ruto"
-  },
-  "license": "MIT",
-  "homepage": "https://alvin-kibet-portfolio.vercel.app",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Alvin-Ruto/portfolio.git"
-  },
-  "bugs": {
-    "url": "https://github.com/Alvin-Ruto/portfolio/issues"
-  },
-  "devDependencies": {
-    "serve": "^14.2.1",
-    "vercel": "^32.0.0"
-  },
-  "engines": {
-    "node": ">=16.0.0"
-  }
+  "author": "Alvin Kibet Ruto",
+  "license": "MIT"
 }
