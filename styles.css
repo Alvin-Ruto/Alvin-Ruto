@@ -288,6 +288,26 @@ text-align: center;
     line-height: 1.6;
     margin-bottom: 20px;
 }
+
+/* Volunteering Section */
+.volunteering-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.volunteering-section h3 {
+    font-size: 20px;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.volunteering-section p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
 /* Experience section*/
 .experience {
     padding: 100px 10%;
@@ -333,6 +353,16 @@ text-align: center;
     text-align: right;
     font-weight: normal;
     color: gray;
+}
+
+/* Description styling */
+.experience-box .description {
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    color: #555;
+    font-style: italic;
 }
 /* Vertical Line */
 .vertical-line {
@@ -462,19 +492,237 @@ text-align: center;
     font-size: 18px;
     margin: 10px 0;
 }
-/* Work Card Button */
-.more-btn {
-    display: inline-block;
-    background-color: #32CD32;
-    color: black;
-    font-weight: bold;
+/* Work Card Content */
+.work-card-content {
+    padding: 20px;
+}
+
+.work-card-content h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: var(--accent-color);
+}
+
+.work-card-content p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.work-card-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.github-btn, .drive-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
     padding: 8px 15px;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
     transition: 0.3s;
+    flex: 1;
+    justify-content: center;
+    min-width: 120px;
 }
-.more-btn:hover {
-    background-color: #28a745;
+
+.github-btn {
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+.github-btn:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+.drive-btn {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.drive-btn:hover {
+    background-color: #4285f4;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Projects Section */
+.projects-section {
+    margin-bottom: 80px;
+}
+
+.projects-section h2 {
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+}
+
+/* Video Section */
+.video-section {
+    margin-bottom: 80px;
+    padding: 60px 0;
+    background: var(--bg-secondary);
+}
+
+.video-section h2 {
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow);
+}
+
+.video-placeholder {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.video-placeholder i {
+    font-size: 60px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.video-placeholder h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.video-placeholder p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.video-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ff0000;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.video-btn:hover {
+    background: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 0, 0, 0.3);
+}
+
+/* Documents Section */
+.documents-section {
+    margin-bottom: 40px;
+}
+
+.documents-section h2 {
+    font-size: 32px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+}
+
+.documents-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.document-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.document-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow);
+}
+
+.document-card i {
+    font-size: 40px;
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.document-card h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--text-primary);
+}
+
+.document-card p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.document-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent-color);
+    color: var(--bg-primary);
+    padding: 12px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.document-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px var(--shadow);
 }
 
 /* Contact Section */
