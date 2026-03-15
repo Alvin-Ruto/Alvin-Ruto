@@ -103,6 +103,7 @@
 /* Base */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -117,13 +118,22 @@ body {
     color: var(--text-primary);
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     transition: background-color var(--duration-slow) var(--ease-out), color var(--duration-slow) var(--ease-out);
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 var(--space-6);
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+}
+
+/* Section scroll margin for anchor links (avoid nav overlap) */
+section[id] {
+    scroll-margin-top: 88px;
 }
 
 /* ============================================
@@ -1455,6 +1465,15 @@ html body .floating-actions {
     box-shadow: 0 10px 25px var(--shadow);
 }
 
+.floating-btn:active {
+    transform: scale(0.97);
+}
+
+.floating-btn {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
 .floating-btn i {
     font-size: 18px;
 }
@@ -1487,6 +1506,15 @@ html body .floating-actions {
     background: var(--accent-hover);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px var(--shadow);
+}
+
+.scroll-to-top:active {
+    transform: scale(0.97);
+}
+
+.scroll-to-top {
+    cursor: pointer;
+    touch-action: manipulation;
 }
 
 /* Enhanced Animations */
@@ -1638,116 +1666,341 @@ body.menu-open {
     .bottom-line { margin-left: auto; margin-right: auto; }
 }
 
+/* ============================================
+   Mobile & large mobile (320px – 768px)
+   ============================================ */
 @media (max-width: 768px) {
-    .nav-outer {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-    .nav-island {
-        padding: 12px 16px 12px 20px;
-        min-height: 56px;
-        width: 100%;
-        max-width: 100%;
-    }
-    .nav-toggle {
-        display: flex;
-    }
-    .nav-island > nav ul {
-        display: none;
-    }
-    .nav-drawer {
-        display: block;
-    }
-    .nav-overlay {
-        display: block;
-    }
-    .logo img {
-        width: 60px;
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
-    .floating-actions {
-        bottom: 20px;
-        right: 20px;
-        gap: 8px;
-        flex-direction: row;
-        align-items: flex-end;
-        flex-wrap: nowrap;
-    }
-
-    .floating-btn {
-        padding: 10px 14px;
-        font-size: 12px;
-        min-width: 90px;
-        max-width: 100px;
-        height: 44px;
+    /* --- Mobile top bar: [ Logo ] [ Menu ] [ Theme ] --- */
+    header.nav-outer {
+        padding: 0 16px;
+        height: 64px;
+        min-height: 64px;
+        align-items: center;
         justify-content: center;
     }
 
-    .floating-btn span {
+    header.nav-outer.scrolled {
+        padding-top: 0;
+    }
+
+    .nav-island {
+        width: 100%;
+        max-width: 100%;
+        min-height: 64px;
+        height: 64px;
+        padding: 0 4px;
+        border-radius: 16px;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        gap: 8px;
+    }
+
+    header.nav-outer.scrolled .nav-island {
+        min-height: 56px;
+        height: 56px;
+        padding: 0 4px;
+    }
+
+    .nav-island .logo {
+        flex-shrink: 0;
+    }
+
+    .nav-island .logo a {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        max-height: 42px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .nav-island > nav {
         display: none;
     }
 
+    .nav-toggle {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        flex-shrink: 0;
+    }
+
+    .theme-toggle {
+        flex-shrink: 0;
+    }
+
+    .theme-btn {
+        width: 44px;
+        height: 44px;
+        min-width: 44px;
+        min-height: 44px;
+        flex-shrink: 0;
+    }
+
+    /* --- Mobile drawer: full-width dropdown, slide-down 250ms --- */
+    .nav-drawer {
+        display: block;
+        top: 64px;
+        left: 16px;
+        right: 16px;
+        width: calc(100% - 32px);
+        max-width: none;
+        transform: translateX(0) translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 18px;
+        padding: 12px 8px 20px;
+        transition: transform 250ms ease, opacity 250ms ease, visibility 250ms ease;
+    }
+
+    .nav-drawer.open {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-drawer ul li a {
+        min-height: 48px;
+        padding: 14px 16px;
+        border-radius: 12px;
+        font-size: 16px;
+    }
+
+    .nav-overlay {
+        display: block;
+    }
+
+    /* --- Floating actions: in-flow grid, no overlap --- */
+    .floating-actions {
+        position: static !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        width: 100%;
+        max-width: calc(100% - 32px);
+        margin: 24px 16px 32px;
+        padding: 0;
+        z-index: auto;
+    }
+
+    .floating-btn {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        min-height: 48px !important;
+        height: auto !important;
+        padding: 14px 16px !important;
+        border-radius: 12px !important;
+        justify-content: center;
+        font-size: 15px !important;
+    }
+
+    .floating-btn span {
+        display: inline !important;
+    }
+
     .scroll-to-top {
-        bottom: 20px;
-        left: 20px;
+        bottom: 24px;
+        left: 16px;
         width: 48px;
         height: 48px;
         font-size: 18px;
     }
 
-    .theme-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1.1rem;
-    }
-
+    /* --- Hero: mobile typography --- */
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: var(--space-24) var(--space-6) var(--space-12);
+        padding: 88px 16px 32px;
+        min-height: auto;
     }
 
-    .hero-left .hero-title { text-align: center; }
-    .hero-left .hero-subtitle { text-align: center; }
-    .hero-left .hero-tagline { margin-left: auto; margin-right: auto; text-align: center; }
-
-    .hero-right p {
-        font-size: var(--text-base);
+    .hero-left .hero-title {
+        font-size: 32px;
+        line-height: 1.2;
         text-align: center;
     }
 
+    .hero-left .hero-subtitle {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .hero-left .hero-tagline {
+        font-size: 16px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-right p {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .hero-image img {
+        width: min(200px, 50vw);
+        max-width: 100%;
+    }
+
     .hero-highlights {
-        padding: var(--space-4);
-        gap: var(--space-3);
+        padding: 16px;
+        gap: 12px;
+        margin-top: 24px;
     }
 
-    .skills-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
+    .hero-highlights span {
+        font-size: 14px;
     }
 
+    .hero-bottom {
+        padding: 0 16px;
+        font-size: 16px;
+        line-height: 1.6;
+        margin-top: 24px;
+    }
+
+    /* --- Section titles --- */
+    .skills h2,
+    .github-projects h2,
+    .work h1,
+    .projects-section h2,
+    .contact-left h1,
+    .experience-left h1,
+    .about-right h1 {
+        font-size: 26px;
+        line-height: 1.3;
+    }
+
+    .skills,
+    .github-projects,
+    .about,
+    .experience,
+    .work,
+    .contact,
+    .contact-form-section,
+    .social-section {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+
+    /* --- Project cards: single column, 16px / 12px / 18px --- */
     .projects-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-6);
+        gap: 12px;
+    }
+
+    .project-card {
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .project-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .project-content p {
+        font-size: 15px;
+        line-height: 1.6;
     }
 
     .work-container {
         grid-template-columns: 1fr;
-        gap: var(--space-6);
+        gap: 12px;
     }
 
+    .work-card {
+        max-width: 100%;
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .work-card img {
+        width: 100%;
+        height: auto;
+        min-height: 160px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .work-card-content {
+        padding: 16px 0 0;
+    }
+
+    .work-card-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .work-card-content p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .work-card-actions {
+        gap: 12px;
+    }
+
+    .work-card-actions .github-btn,
+    .work-card-actions .drive-btn {
+        min-height: 44px;
+        padding: 12px 16px;
+        border-radius: 12px;
+    }
+
+    /* --- About / Experience / Contact --- */
+    .about-container,
+    .experience-container,
     .contact-container {
         flex-direction: column;
-        gap: var(--space-8);
+        gap: 24px;
+    }
+
+    .about-left img,
+    .about-left .image {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .about-info {
+        max-width: 100%;
+    }
+
+    .about-right,
+    .about-left,
+    .experience-left,
+    .experience-right,
+    .contact-left,
+    .contact-right {
+        text-align: center;
+    }
+
+    .vertical-line {
+        display: none;
     }
 
     .contact-box {
         width: 100%;
-        max-width: 320px;
+        max-width: 100%;
     }
 
     .contact-form {
-        padding: var(--space-6);
+        padding: 20px 16px;
     }
 
     .form-row {
@@ -1758,68 +2011,90 @@ body.menu-open {
         width: 100%;
     }
 
-    .about-container {
-        flex-direction: column;
-        gap: var(--space-8);
+    .experience-box {
+        max-width: 100%;
     }
 
-    .about-left {
-        text-align: center;
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
     }
 
-    .about-right {
-        text-align: center;
-    }
-
-    .experience-container {
-        flex-direction: column;
-        gap: var(--space-8);
-    }
-
-    .vertical-line {
-        display: none;
+    .skill-category {
+        padding: 20px 16px;
     }
 }
 
-/* Extra small screens */
+/* Small mobile (320px – 480px) */
 @media (max-width: 480px) {
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
     .nav-island {
-        padding: 10px 12px 10px 16px;
+        padding: 0 2px;
     }
+
     .logo img {
-        width: 52px;
+        max-height: 38px;
     }
-    .theme-btn {
-        width: 40px;
-        height: 40px;
-        min-width: 44px;
-        min-height: 44px;
-        font-size: 1rem;
+
+    .hero-left .hero-title {
+        font-size: 28px;
     }
-    
-    /* Floating buttons */
+
+    .hero-left .hero-subtitle {
+        font-size: 18px;
+    }
+
     .floating-actions {
-        bottom: 15px;
-        right: 15px;
-        gap: 6px;
-        flex-wrap: nowrap;
-        align-items: flex-end;
+        grid-template-columns: 1fr;
+        margin-left: 16px;
+        margin-right: 16px;
     }
-    
+
     .floating-btn {
-        padding: 8px 12px;
-        font-size: 11px;
-        min-width: 70px;
-        max-width: 80px;
-        height: 35px;
+        min-height: 48px;
     }
-    
+
     .scroll-to-top {
-        bottom: 15px;
-        left: 15px;
-        width: 40px;
-        height: 40px;
+        bottom: 20px;
+        left: 16px;
+        width: 44px;
+        height: 44px;
         font-size: 16px;
+    }
+}
+
+/* Touch & interaction (all viewports) */
+button,
+a.floating-btn,
+a.github-btn,
+a.drive-btn,
+.document-btn,
+.video-btn,
+.nav-toggle,
+.theme-btn {
+    cursor: pointer;
+    touch-action: manipulation;
+}
+
+button:active,
+a.floating-btn:active,
+.nav-toggle:active,
+.theme-btn:active {
+    transform: scale(0.97);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-drawer,
+    .nav-drawer.open {
+        transition: none;
+    }
+    .floating-actions,
+    .floating-btn {
+        transition: none;
     }
 }
 
@@ -1926,7 +2201,12 @@ body.menu-open {
 }
 
 .submit-btn:active {
-    transform: translateY(0);
+    transform: scale(0.97);
+}
+
+.submit-btn {
+    cursor: pointer;
+    touch-action: manipulation;
 }
 
 /* Social Media Section */
