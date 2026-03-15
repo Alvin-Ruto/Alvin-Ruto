@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience — Alvin Kibet Ruto</title>
+    <meta name="description" content="Experience — Alvin Kibet Ruto. Trinidad Wiseman, Chemusian Farmers Cooperative, Konza Technopolis, iLab Africa.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Home">
+                <img src="assets/logo.jpg" alt="Alvin Kibet Ruto">
+            </a>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="experience.html" class="active">Experience</a></li>
+                <li><a href="work.html">My Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+            <span class="icon-menu"><i class="fas fa-bars" aria-hidden="true"></i></span>
+            <span class="icon-close"><i class="fas fa-times" aria-hidden="true"></i></span>
+        </button>
+        <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+        <div id="nav-drawer" class="nav-drawer" role="dialog" aria-label="Navigation menu">
+            <nav aria-label="Mobile navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="experience.html" class="active">Experience</a></li>
+                    <li><a href="work.html">My Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Toggle dark/light theme">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="experience" aria-labelledby="experience-heading">
+            <div class="experience-container">
+                <div class="experience-left">
+                    <h1 id="experience-heading">My <span class="highlight">Experience</span></h1>
+
+                    <div class="experience-box">
+                        <p><strong>Software Engineering Intern</strong><br>Trinidad Wiseman — Tallinn, Estonia</p>
+                        <p class="date">Feb 2026 – Present</p>
+                        <p class="description">Contributing to an ML-powered customer matching solution with human review loop. Improving entity resolution and data quality workflows. Supporting full-stack solution thinking and system architecture in a practical product environment.</p>
+
+                        <p><strong>Chief Technology Lead / Digital Systems Lead</strong><br>Chemusian Farmers Cooperative — Kenya</p>
+                        <p class="date">Jan 2023 – Present</p>
+                        <p class="description">Digitized cooperative operations using farmer digital IDs and digital record systems. Improved operational visibility and coordination through web-based tools. Supporting agricultural participation and digital modernization efforts.</p>
+
+                        <p><strong>Software Engineer & Data Analyst (Attaché)</strong><br>Konza Technopolis — Kenya</p>
+                        <p class="date">Jan 2025 – May 2025</p>
+                        <p class="description">Supported cloud infrastructure, smart city systems, and enterprise IT services. Contributed to migration, platform performance, infrastructure upgrades, and digital service support.</p>
+
+                        <p><strong>Data Science Intern</strong><br>iLab Africa — Kenya</p>
+                        <p class="date">Jan 2023 – Jun 2023</p>
+                        <p class="description">Applied GIS, Power BI, and field research methods to sustainability-related analysis. Supported data-informed recommendations for municipal waste and biogas-related infrastructure.</p>
+                    </div>
+
+                    <div class="achievements-strip">
+                        <span><i class="fas fa-trophy" aria-hidden="true"></i> 3rd Place — Digital Explorers Hackathon</span>
+                        <span><i class="fas fa-users" aria-hidden="true"></i> Delegate — Latitude59 Tech Conference</span>
+                    </div>
+                </div>
+
+                <div class="vertical-line" aria-hidden="true"></div>
+
+                <div class="experience-right">
+                    <h3>Referees</h3>
+                    <p><a href="mailto:mogamba@strathmore.edu" class="referee-link">Data Science Academy (iLab Africa)</a></p>
+                    <p><a href="mailto:peterruto605@gmail.com" class="referee-link">Farmers Cooperative</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-actions">
+        <a href="assets/my_resume.pdf" download class="floating-btn resume-btn" aria-label="Download resume">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            <span>Resume</span>
+        </a>
+        <a href="mailto:alvinandy16@gmail.com" class="floating-btn contact-btn" aria-label="Contact by email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <script src="github-api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

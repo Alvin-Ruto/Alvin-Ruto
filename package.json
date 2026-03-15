@@ -1,0 +1,18 @@
+{
+  "name": "alvin-kibet-portfolio",
+  "version": "1.0.0",
+  "description": "Alvin Kibet's professional portfolio website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "portfolio",
+    "web-development",
+    "alvin-kibet",
+    "static-site"
+  ],
+  "author": "Alvin Kibet Ruto",
+  "license": "MIT"
+}

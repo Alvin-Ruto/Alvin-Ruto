@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work — Alvin Kibet Ruto</title>
+    <meta name="description" content="Projects by Alvin Kibet Ruto — ZIRAA, ML customer matching, AES Encrypted Messenger, AgriTrack, ML Dashboard. Software & data systems.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="index.html" aria-label="Home">
+                <img src="assets/logo.jpg" alt="Alvin Kibet Ruto">
+            </a>
+        </div>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="work.html" class="active">My Work</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+            <span class="icon-menu"><i class="fas fa-bars" aria-hidden="true"></i></span>
+            <span class="icon-close"><i class="fas fa-times" aria-hidden="true"></i></span>
+        </button>
+        <div id="nav-overlay" class="nav-overlay" aria-hidden="true"></div>
+        <div id="nav-drawer" class="nav-drawer" role="dialog" aria-label="Navigation menu">
+            <nav aria-label="Mobile navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Me</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="work.html" class="active">My Work</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-toggle" class="theme-btn" type="button" aria-label="Toggle dark/light theme">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="work" aria-labelledby="work-heading">
+            <h1 id="work-heading">My <span class="highlight">Work</span></h1>
+
+            <div class="projects-section">
+                <h2>Featured Projects</h2>
+                <div class="work-container">
+                    <article class="work-card reveal" id="ziraa">
+                        <img src="assets/business-dev.jpg" alt="ZIRAA agritech platform" width="350" height="180" loading="lazy">
+                        <div class="work-card-content">
+                            <h3>ZIRAA</h3>
+                            <p>Agritech marketplace platform connecting farmers to markets, with logistics, cooperatives, and data-driven workflows. Digital ecosystem for agriculture built with Django, React, Docker, MongoDB.</p>
+                            <div class="work-card-actions">
+                                <a href="https://github.com/BI-course/BBT4106-Lab2-DataEngineering-a7" class="github-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                                <a href="https://drive.google.com/drive/folders/1Cz-Orh-6b432lJ31QPmRBru7Z2twk0Ik?usp=drive_link" class="drive-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> Drive</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-card reveal">
+                        <img src="assets/data-science.jpg" alt="ML customer matching" width="350" height="180" loading="lazy">
+                        <div class="work-card-content">
+                            <h3>ML-Powered Customer Matching</h3>
+                            <p>Entity resolution and data quality system with ML-assisted matching and human review loop. Professional work at Trinidad Wiseman — improving customer/entity matching and data quality workflows.</p>
+                            <div class="work-card-actions">
+                                <span class="work-badge">Professional work</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-card reveal">
+                        <img src="assets/data-science.jpg" alt="AES Encrypted Messenger" width="350" height="180" loading="lazy">
+                        <div class="work-card-content">
+                            <h3>AES Encrypted Messenger</h3>
+                            <p>Secure communication tool with AES encryption, OTP verification, and Tkinter UI. Security-oriented systems work in Python.</p>
+                            <div class="work-card-actions">
+                                <a href="https://github.com/Alvin-Ruto/AES_Encrypted_Messenger" class="github-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                                <a href="https://drive.google.com/drive/folders/1TOkbY8Lgeu5ljMBQV-P6jsSTDW38wDov?usp=drive_link" class="drive-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> Drive</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-card reveal">
+                        <img src="assets/web-dev.jpg" alt="AgriTrack 2.0" width="350" height="180" loading="lazy">
+                        <div class="work-card-content">
+                            <h3>AgriTrack 2.0</h3>
+                            <p>Django-based dairy management system with automated milk records, user authentication, and reporting for cooperatives.</p>
+                            <div class="work-card-actions">
+                                <a href="https://github.com/Alvin-Ruto/Dairy_Management_System_with_Python_and_Django" class="github-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                                <a href="https://drive.google.com/drive/folders/1d5cejpOhAK3_rklBxOBr-zdYN_U9_UFL?usp=drive_link" class="drive-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> Drive</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-card reveal">
+                        <img src="assets/mobile-dev.jpg" alt="ML Dashboard" width="350" height="180" loading="lazy">
+                        <div class="work-card-content">
+                            <h3>ML Dashboard & Model Serving</h3>
+                            <p>Flask + Docker + NGINX system serving multiple ML models with real-time monitoring and business recommendation algorithms.</p>
+                            <div class="work-card-actions">
+                                <a href="https://github.com/BI-course/BBT4206-Lab-on-ARM-a7" class="github-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                                <a href="https://drive.google.com/drive/folders/1d5cejpOhAK3_rklBxOBr-zdYN_U9_UFL?usp=drive_link" class="drive-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> Drive</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="work-card reveal">
+                        <img src="assets/mobile-dev.jpg" alt="Code Rush game" width="350" height="180" loading="lazy">
+                        <div class="work-card-content">
+                            <h3>Code Rush (Unity)</h3>
+                            <p>2D Unity puzzle game with C#, ShaderLab, and HLSL. Gameplay logic and visual effects.</p>
+                            <div class="work-card-actions">
+                                <a href="https://github.com/Alvin-Ruto/Alvin-Ruto" class="github-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
+                                <a href="https://drive.google.com/drive/folders/1Cz-Orh-6b432lJ31QPmRBru7Z2twk0Ik?usp=drive_link" class="drive-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> Drive</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <div class="video-section">
+                <h2>Video Showcase</h2>
+                <div class="video-container">
+                    <div class="video-card reveal">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle" aria-hidden="true"></i>
+                            <h4>Digital Explorer</h4>
+                            <p>Introduction, skills, and why I joined the Digital Explorers program.</p>
+                            <a href="https://drive.google.com/drive/folders/19tA948s3xyYFch8DllfgpcXHDh_gGFrj?usp=sharing" class="video-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> View on Google Drive</a>
+                        </div>
+                    </div>
+                    <div class="video-card reveal">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle" aria-hidden="true"></i>
+                            <h4>Technical Presentations</h4>
+                            <p>Technical presentations and project walkthroughs.</p>
+                            <a href="https://drive.google.com/drive/folders/19tA948s3xyYFch8DllfgpcXHDh_gGFrj?usp=sharing" class="video-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> View on Google Drive</a>
+                        </div>
+                    </div>
+                    <div class="video-card reveal">
+                        <div class="video-placeholder">
+                            <i class="fas fa-play-circle" aria-hidden="true"></i>
+                            <h4>Code Reviews & Tutorials</h4>
+                            <p>Code review sessions and development process insights.</p>
+                            <a href="https://drive.google.com/drive/folders/19tA948s3xyYFch8DllfgpcXHDh_gGFrj?usp=sharing" class="video-btn" target="_blank" rel="noopener noreferrer"><i class="fab fa-google-drive" aria-hidden="true"></i> View on Google Drive</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="documents-section">
+                <h2>Certificates & Documents</h2>
+                <div class="documents-container">
+                    <div class="document-card reveal">
+                        <i class="fas fa-certificate" aria-hidden="true"></i>
+                        <h4>Konza Technopolis Recommendation</h4>
+                        <p>Recommendation letter from Konza Technopolis for IT Enterprise & Smart City Solutions internship.</p>
+                        <a href="assets/Alvin Kibet.pdf" class="document-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> View Document</a>
+                    </div>
+                    <div class="document-card reveal">
+                        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                        <h4>Resume</h4>
+                        <p>Download my complete resume with experience and skills.</p>
+                        <a href="assets/my_resume.pdf" class="document-btn" target="_blank" rel="noopener noreferrer"><i class="fas fa-download" aria-hidden="true"></i> Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="floating-actions">
+        <a href="assets/my_resume.pdf" download class="floating-btn resume-btn" aria-label="Download resume">
+            <i class="fas fa-download" aria-hidden="true"></i>
+            <span>Resume</span>
+        </a>
+        <a href="mailto:alvinandy16@gmail.com" class="floating-btn contact-btn" aria-label="Contact by email">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+        </a>
+    </div>
+
+    <script src="github-api.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

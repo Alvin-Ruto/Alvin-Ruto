@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://alvin-kibet-portfolio.vercel.app/sitemap.xml
+
+# Disallow crawling of certain files
+Disallow: /assets/my_resume.pdf
+Disallow: /*.json$
+Disallow: /deploy.sh
