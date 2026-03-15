@@ -64,13 +64,19 @@
         });
     }
 
-    // --- Active nav link by current page ---
+    // --- Active nav link by current page + aria-current ---
     function setActiveNav() {
-        const path = (window.location.pathname || '').replace(/^\//, '') || 'index.html';
-        const fileName = path.split('/').pop() || 'index.html';
+        var path = (window.location.pathname || '').replace(/^\//, '') || 'index.html';
+        var fileName = path.split('/').pop() || 'index.html';
         document.querySelectorAll('nav a[href]').forEach(function (a) {
-            const href = (a.getAttribute('href') || '').split('/').pop();
-            a.classList.toggle('active', href === fileName);
+            var href = (a.getAttribute('href') || '').split('/').pop();
+            var isActive = href === fileName;
+            a.classList.toggle('active', isActive);
+            if (isActive) {
+                a.setAttribute('aria-current', 'page');
+            } else {
+                a.removeAttribute('aria-current');
+            }
         });
     }
 
